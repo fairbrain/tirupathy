@@ -943,6 +943,95 @@ h6 a {
   background-color: #fff !important;
 }
 
+.h-400 {
+  min-height: 380px;
+}
+
+.download-brochure {
+  position: fixed;
+  bottom: 10px;
+  right: 70px;
+  z-index: 9999;
+}
+
+/* Button Styling */
+.brochure-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #0e0503, #030303, #b9b9b7c2);
+  background-size: 300%;
+  box-shadow: 0 0 12px #ffc30c, 0 0 25px #ffc20c9a;
+  animation: glowMove 4s infinite, floatUp 3s ease-in-out infinite;
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover animation */
+.brochure-btn:hover {
+  background-position: 100% 0;
+  box-shadow: 0 0 18px rgb(248, 10, 10), 0 0 40px rgba(255, 75, 43, 0.8);
+}
+
+/* Floating up-down effect */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Gradient movement */
+@keyframes glowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========= Responsive Font Sizes ========= */
+
+/* Tablets */
+@media (max-width: 991px) {
+  .brochure-btn {
+    font-size: 15px;
+    padding: 12px 26px;
+  }
+
+  .brochure-btn {
+    font-size: 17px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  .brochure-btn {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+
+  .brochure-btn.dark-red i {
+    font-size: 16px;
+  }
+}
+
 .bg-light-snow {
   background-color: #fafafb;
 }
@@ -968,6 +1057,7 @@ h6 a {
 .request-callback {
   background: linear-gradient(rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.281)), url('assets/img/leading_construction/map_2.webp') center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .padding-top-45 {
@@ -1229,7 +1319,7 @@ body.page #main-content {
   border-left: 0px;
 }
 
-.gallery img{
+.gallery img {
   height: 300px;
   object-fit: cover;
 }
@@ -1602,7 +1692,7 @@ body.page #main-content {
 
 .topbar-style-3 #top-bar,
 .topbar-style-3 #top-bar a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgb(255, 255, 255);
 }
 
 .topbar-style-3 #top-bar .top-bar-inner-wrap {
@@ -3277,7 +3367,7 @@ body.page #main-content {
 
 /* Widget text */
 #footer-widgets .widget.widget_text {
-  background: url('assets/img/page/bg-contact.png') no-repeat bottom right;
+  background: url('') no-repeat bottom right;
 }
 
 #footer-widgets .widget.widget_text li {
